@@ -41,6 +41,7 @@ public class HomeActivity extends AppCompatActivity {
                         bundle.putInt("type",0);
                         intent.putExtras(bundle);
                         startActivity(intent);
+                        finish();
                         break;
                     case 1:
 
@@ -49,6 +50,7 @@ public class HomeActivity extends AppCompatActivity {
                         bundle1.putInt("type",1);
                         intent1.putExtras(bundle1);
                         startActivity(intent1);
+                        finish();
                         break;
 
                     case 2:
@@ -58,12 +60,14 @@ public class HomeActivity extends AppCompatActivity {
                         bundle2.putInt("type",2);
                         intent2.putExtras(bundle2);
                         startActivity(intent2);
+                        finish();
                         break;
                     case 3:
                         Intent intent3=new Intent(mContext,ItemActivity.class);
                         Bundle bundle3 = new Bundle();
                         bundle3.putInt("type",3);
                         intent3.putExtras(bundle3);
+                        finish();
                         startActivity(intent3);
                 }
 

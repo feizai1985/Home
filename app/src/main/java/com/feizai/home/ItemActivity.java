@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 
 import static com.feizai.home.ContentValues.*;
@@ -39,15 +40,39 @@ private String[] itmes;
                 ints=ContentValues.JIAJUINTS;
                 break;
             case 1 :
+                itmes=ContentValues.JIAJUITEMS2;
+                ints=ContentValues.JIAJUINTS2;
+                break;
+            case 2 :
+                itmes=ContentValues.JIAJUITEMS3;
+                ints=ContentValues.JIAJUINTS3;
+                break;
+            case 3 :
                 itmes=ContentValues.JIARENITEMS;
                 ints=ContentValues.JIARENINTS;
+                break;
+            case 4 :
+                itmes=ContentValues.TOUXIANGITEMS;
+                ints=ContentValues.TOUXIANGINTS;
+                break;
+            case 5 :
+                itmes=ContentValues.BAOBAOITEMS;
+                ints=ContentValues.BAOBAOINTS;
+                break;
+            case 6 :
+                itmes=ContentValues.CARITEMS;
+                ints=ContentValues.CARINTS;
+                break;
+            case 7 :
+                itmes=ContentValues.JIEITEMS;
+                ints=ContentValues.JIEINTS;
                 break;
         }
     }
 
     private void initUI() {
         gv_item = (GridView) findViewById(R.id.gv_item);
-        gv_item.setAdapter(new MyAdapter(mContext,itmes , ints));
+        gv_item.setAdapter(new MyAdapter(mContext,itmes, ints));
         gv_item.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(final AdapterView<?> parent, View view, final int position, long id) {
@@ -62,4 +87,17 @@ private String[] itmes;
 
     }
 
+    @Override
+    public void onBackPressed() {
+        gv_item=null;
+        finish();
+        Intent intent = new Intent(mContext, HomeActivity.class);
+        startActivity(intent);
+        super.onBackPressed();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

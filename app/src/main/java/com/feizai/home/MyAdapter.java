@@ -38,7 +38,12 @@ public class MyAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = View.inflate(mContext, R.layout.homeitems, null);
+        View view=null;
+        if(convertView!=null){
+            view=convertView;
+        }else {
+            view = View.inflate(mContext, R.layout.homeitems, null);
+        }
         ImageView iv_home = (ImageView) view.findViewById(R.id.iv_home);
         iv_home.setBackgroundResource(ints[position]);
         TextView tv_home = (TextView) view.findViewById(R.id.tv_home);

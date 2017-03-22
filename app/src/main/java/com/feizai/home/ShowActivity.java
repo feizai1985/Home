@@ -37,10 +37,41 @@ private String[] items;
                 show();
                 break;
             case 1:
+                items=ContentValues.JIAJUITEMS2;
+                ints=ContentValues.JIAJUINTS2;
+                show();
+                break;
+            case 2:
+                items=ContentValues.JIAJUITEMS3;
+                ints=ContentValues.JIAJUINTS3;
+                show();
+                break;
+            case 3:
                 items=ContentValues.JIARENITEMS;
                 ints=ContentValues.JIARENINTS;
                 show();
                 break;
+            case 4 :
+                items=ContentValues.TOUXIANGITEMS;
+                ints=ContentValues.TOUXIANGINTS;
+                show();
+                break;
+            case 5 :
+                items=ContentValues.BAOBAOITEMS;
+                ints=ContentValues.BAOBAOINTS;
+                show();
+                break;
+            case 6 :
+                items=ContentValues.CARITEMS;
+                ints=ContentValues.CARINTS;
+                show();
+                break;
+            case 7 :
+                items=ContentValues.JIEITEMS;
+                ints=ContentValues.JIEINTS;
+                show();
+                break;
+
         }
     }
 
