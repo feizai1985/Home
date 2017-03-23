@@ -39,14 +39,7 @@ private String[] itmes;
                 itmes=ContentValues.JIAJUITEMS;
                 ints=ContentValues.JIAJUINTS;
                 break;
-            case 1 :
-                itmes=ContentValues.JIAJUITEMS2;
-                ints=ContentValues.JIAJUINTS2;
-                break;
-            case 2 :
-                itmes=ContentValues.JIAJUITEMS3;
-                ints=ContentValues.JIAJUINTS3;
-                break;
+
             case 3 :
                 itmes=ContentValues.JIARENITEMS;
                 ints=ContentValues.JIARENINTS;

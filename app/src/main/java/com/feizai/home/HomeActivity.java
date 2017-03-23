@@ -36,7 +36,7 @@ public class HomeActivity extends AppCompatActivity {
 
                 switch (position){
                     case 0:
-                        Intent intent=new Intent(mContext,ItemActivity.class);
+                        Intent intent=new Intent(mContext,ShowActivity.class);
                         Bundle bundle = new Bundle();
                         bundle.putInt("type",0);
                         intent.putExtras(bundle);
@@ -45,7 +45,7 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     case 1:
 
-                        Intent intent1=new Intent(mContext,ItemActivity.class);
+                        Intent intent1=new Intent(mContext,ShowActivity.class);
                         Bundle bundle1 = new Bundle();
                         bundle1.putInt("type",1);
                         intent1.putExtras(bundle1);
@@ -55,7 +55,7 @@ public class HomeActivity extends AppCompatActivity {
 
                     case 2:
 
-                        Intent intent2=new Intent(mContext,ItemActivity.class);
+                        Intent intent2=new Intent(mContext,ShowActivity.class);
                         Bundle bundle2 = new Bundle();
                         bundle2.putInt("type",2);
                         intent2.putExtras(bundle2);
@@ -63,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
                         finish();
                         break;
                     case 3:
-                        Intent intent3=new Intent(mContext,ItemActivity.class);
+                        Intent intent3=new Intent(mContext,ShowActivity.class);
                         Bundle bundle3 = new Bundle();
                         bundle3.putInt("type",3);
                         intent3.putExtras(bundle3);

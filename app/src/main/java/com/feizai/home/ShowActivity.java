@@ -2,6 +2,7 @@ package com.feizai.home;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,37 +37,28 @@ private String[] items;
                 ints=ContentValues.JIAJUINTS;
                 show();
                 break;
+
             case 1:
-                items=ContentValues.JIAJUITEMS2;
-                ints=ContentValues.JIAJUINTS2;
-                show();
-                break;
-            case 2:
-                items=ContentValues.JIAJUITEMS3;
-                ints=ContentValues.JIAJUINTS3;
-                show();
-                break;
-            case 3:
                 items=ContentValues.JIARENITEMS;
                 ints=ContentValues.JIARENINTS;
                 show();
                 break;
-            case 4 :
+            case 2 :
                 items=ContentValues.TOUXIANGITEMS;
                 ints=ContentValues.TOUXIANGINTS;
                 show();
                 break;
-            case 5 :
+            case 3 :
                 items=ContentValues.BAOBAOITEMS;
                 ints=ContentValues.BAOBAOINTS;
                 show();
                 break;
-            case 6 :
+            case 4 :
                 items=ContentValues.CARITEMS;
                 ints=ContentValues.CARINTS;
                 show();
                 break;
-            case 7 :
+            case 5 :
                 items=ContentValues.JIEITEMS;
                 ints=ContentValues.JIEINTS;
                 show();
@@ -93,6 +85,8 @@ private String[] items;
             @Override
             public void onClick(View v) {
                 finish();
+                Intent intent = new Intent(mContext, HomeActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -100,9 +94,9 @@ private String[] items;
     private void show() {
         View inflate = View.inflate(mContext, R.layout.imageitmes, null);
         ImageView iv_home = (ImageView) inflate.findViewById(R.id.iv_main);
-        iv_home.setBackgroundResource(ints[position]);
+        iv_home.setBackgroundResource(ints[0]);
         TextView tv_home = (TextView) inflate.findViewById(R.id.tv_main);
-        tv_home.setText(items[position]);
+        tv_home.setText(items[0]);
          fl_show.addView(inflate);
     }
 
