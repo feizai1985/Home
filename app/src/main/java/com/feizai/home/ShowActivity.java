@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -18,6 +19,8 @@ public class ShowActivity extends AppCompatActivity {
     private FrameLayout fl_show;
 private String[] items;
     private int[] ints;
+    private float xStart;
+    private float xEnd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -129,5 +132,24 @@ private String[] items;
         position=position+1;
     }
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        switch (event.getAction()){
+            case MotionEvent.ACTION_DOWN :
 
+                xStart = event.getRawX();
+                break;
+            case MotionEvent.ACTION_UP:
+                xEnd = event.getRawX();
+                if(xEnd-xStart>50){
+                  pre();
+                }
+                if(xEnd-xStart<50){
+                    next();
+                }
+                break;
+
+        }
+        return super.onTouchEvent(event);
+    }
 }
